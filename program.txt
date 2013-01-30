@@ -1,0 +1,39 @@
+# Create int ID 0 for testing if input is greater than 0
+VAR 0
+INT 0
+# Create int ID 1 for testing results
+VAR 1
+INT 0
+# Create int ID 2 and equal it to value from input
+STP 1
+VAR 2
+ASK "Enter first number: "
+VAR 1
+SUM 2
+LT 0
+IF 11
+# Create int ID 3 and equal it to value from input
+STP 2
+VAR 3
+ASK "Enter second number: "
+VAR 1
+SUM 3
+LT 0
+IF 12
+# Create int ID 4 and equal it to 0, then add Var 1 and Var 2 to it
+VAR 4
+INT 0
+SUM 2
+SUM 3
+# Print result
+PRT "Sum of numbers entered: $"
+# Stop program
+END
+# Function A
+STP 11
+PRT "First number cannot be lower than 0"
+JMP 1
+# Function B
+STP 12
+PRT "Second number cannot be lower than 0"
+JMP 2
